@@ -26,7 +26,7 @@ public class Hooks {
 
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().get("https://login1.nextbasecrm.com/");
     }
 
     //@Before (value = "@login", order = 2 )
