@@ -65,4 +65,9 @@ public class B30G17_135_Step_Def_Login_CK {
 
         Assert.assertTrue(loginPage.passwordHidden.getAttribute("type").equals("password"));
     }
+
+    @When("{string} user enters with valid credential")
+    public void userEntersWithValidCredential(String usertype) {
+        loginPage.loginWithUserType(usertype);
+    }
 }

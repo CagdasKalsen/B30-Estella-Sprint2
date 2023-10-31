@@ -12,20 +12,39 @@ Feature: Login feature
 		      | Username | Password |
 		      |hr3@cydeo.com|UserUser|
 		      |helpdesk2@cydeo.com|UserUser|
-		      |marketing1@cydeo.com|UserUser|	
+		      |marketing1@cydeo.com|UserUser|
 
-	
-	@B30G17-151
-	Scenario Outline: Verify users cant log in with the invalid credentials
+	@hrLogin
+	 Scenario:
 		Given user is on the login page
-		    When user enters invalid credentials "<Username>" and "<Password>"
-		    Then the user should see Incorrect login or password message
-		    Examples:
-		
-		      | Username | Password |
-		      |hr3@cydeo.com|Useruser|
-		      |helpdesk12@cydeo.com|Userser|
-		      |marketing@cydeo.com|Useruser|	
+		When "hr" user enters with valid credential
+		Then the user should be logged in successfully
+#		When "Marketing" enters with valid credential
+
+#	@helpdeskLogin
+#	Scenario:
+#		Given user is on the login page
+#		When "helpdesk" enters with valid credential
+#		Then the user should be logged in successfully
+#
+#	@marketingLogin
+#	Scenario:
+#		Given user is on the login page
+#		When "marketing" enters with valid credential
+#		Then the user should be logged in successfully
+#
+#
+#	@B30G17-151
+#	Scenario Outline: Verify users cant log in with the invalid credentials
+#		Given user is on the login page
+#		    When user enters invalid credentials "<Username>" and "<Password>"
+#		    Then the user should see Incorrect login or password message
+#		    Examples:
+#
+#		      | Username | Password |
+#		      |hr3@cydeo.com|Useruser|
+#		      |helpdesk12@cydeo.com|Userser|
+#		      |marketing@cydeo.com|Useruser|
 
 	
 	@B30G17-152

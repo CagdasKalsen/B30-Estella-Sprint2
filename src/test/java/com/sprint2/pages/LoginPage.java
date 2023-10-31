@@ -2,6 +2,7 @@ package com.sprint2.pages;
 
 
 import com.sprint2.utilities.BrowserUtils;
+import com.sprint2.utilities.ConfigurationReader;
 import com.sprint2.utilities.Driver;
 import com.sprint2.utilities.ExcelRead;
 import org.openqa.selenium.By;
@@ -36,12 +37,32 @@ public class LoginPage {
     public WebElement passwordHidden;
 
 
-    public void login(String userNameStr, String passwordStr) {
+    public void login(String userNameStr) {
 
         userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
+        password.sendKeys(ConfigurationReader.getProperty("password"));
         submit.click();
         // verification that we logged
+    }
+
+    public void login(String userNameStr,String password) {
+
+        userName.sendKeys(userNameStr);
+        this.password.sendKeys(password);
+        submit.click();
+        // verification that we logged
+    }
+
+    public void loginWithUserType(String usertype){
+        if (usertype.equalsIgnoreCase("hr")){
+            login(ConfigurationReader.getProperty("hr_username"));
+        }
+        else if (usertype.equalsIgnoreCase("helpdesk")){
+            login(ConfigurationReader.getProperty("helpdesk_username"));
+        }
+        else if (usertype.equalsIgnoreCase("marketing")){
+            login(ConfigurationReader.getProperty("marketing_username"));
+        }
     }
 
 }
