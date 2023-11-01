@@ -14,11 +14,18 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelRead {
-    LoginPage loginPage=new LoginPage();
-    @Test
-    public static   void read_from_excel()  throws IOException {
-        FileInputStream file = new FileInputStream(ConfigurationReader.getProperty("excel_path"));
-        XSSFWorkbook workbook = new XSSFWorkbook(file);
+//    LoginPage loginPage=new LoginPage();
+    public static void read_from_excel()  {
+
+
+        FileInputStream file =null;
+        XSSFWorkbook workbook = null;
+        try {
+            file= new FileInputStream(ConfigurationReader.getProperty("excel_path"));
+            workbook = new XSSFWorkbook(file);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         XSSFSheet sheet = workbook.getSheet("Credentials");
 
         List<String> hrUsers=new ArrayList<>();
@@ -52,7 +59,11 @@ public class ExcelRead {
                 break;
             }
         }
-
+        System.out.println(passWord);
+        System.out.println(marketingUsers);
+        System.out.println(hdUsers);
+        System.out.println(hdUsers.get(0).length());
+        System.out.println(hrUsers);
         //driver.get locate to app
 
 //        for (int i = 1; i <sheet.getPhysicalNumberOfRows() ; i++){
