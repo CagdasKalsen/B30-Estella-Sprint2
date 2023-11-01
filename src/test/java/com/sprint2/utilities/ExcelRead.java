@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelRead {
-//    LoginPage loginPage=new LoginPage();
-//    @Test
+    LoginPage loginPage=new LoginPage();
+    @Test
     public static   void read_from_excel()  throws IOException {
         FileInputStream file = new FileInputStream(ConfigurationReader.getProperty("excel_path"));
         XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -55,15 +55,15 @@ public class ExcelRead {
 
         //driver.get locate to app
 
-        for (int i = 1; i <sheet.getPhysicalNumberOfRows() ; i++){
-            //locate to username, sendkeys(list.sendkeys).get(0)
+//        for (int i = 1; i <sheet.getPhysicalNumberOfRows() ; i++){
+//            locate to username, sendkeys(list.sendkeys).get(0)
 //            hrUsers.get(i);
-            //locate to password(pasword.sendkeys.list.get(i)
+//            locate to password(pasword.sendkeys.list.get(i)
 //            passWord.get(i);
-            //click
-            //assertion
-            //get element and add list if list size >0 succesfull
-            //locate element in try catch
-        }
+//            click
+//            assertion
+//            get element and add list if list size >0 succesfull
+//            locate element in try catch
+//        }
     }
 }

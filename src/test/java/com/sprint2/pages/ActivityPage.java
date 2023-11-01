@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class B30G17_143_Activity_Page_CK {
+public class ActivityPage {
 
-    public B30G17_143_Activity_Page_CK(){
+    public ActivityPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
