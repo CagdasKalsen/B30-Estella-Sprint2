@@ -26,6 +26,9 @@ public class Hooks {
 
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
+
+        Driver.getDriver().manage().deleteAllCookies();
     }
 
     //@Before (value = "@login", order = 2 )
