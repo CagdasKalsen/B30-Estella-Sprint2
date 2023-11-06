@@ -15,9 +15,10 @@ import org.junit.runner.RunWith;
         features = "C:\\Users\\iqbol\\IdeaProjects\\B30-Estella-Sprint2\\src\\test\\resources\\features",
         glue = "com/sprint2/step_definitions",
         dryRun = false,
-        tags = "@1_B30G17-180",
+
+        tags = "@B30G17-158",
+
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
-
 
