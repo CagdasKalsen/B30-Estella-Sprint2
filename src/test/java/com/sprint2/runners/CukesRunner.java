@@ -16,7 +16,9 @@ import org.junit.runner.RunWith;
         glue = "com/sprint2/step_definitions",
         dryRun = false,
 
-        tags = "@B30G17-158",
+        tags = "@B30G17-180",
+
+
 
         publish = true //generating a report with public link
 )
