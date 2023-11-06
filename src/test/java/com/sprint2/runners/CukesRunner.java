@@ -12,11 +12,12 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
                 "json:target/cucumber.json"
         },
-        features = "src/test/resources/features",
+        features = "C:\\Users\\iqbol\\IdeaProjects\\B30-Estella-Sprint2\\src\\test\\resources\\features",
         glue = "com/sprint2/step_definitions",
         dryRun = false,
-        tags = "@B30G17-137",
+
         tags = "@B30G17-158",
+
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
