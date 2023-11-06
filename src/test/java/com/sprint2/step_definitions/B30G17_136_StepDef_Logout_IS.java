@@ -31,16 +31,6 @@ public class B30G17_136_StepDef_Logout_IS {
 
 
 
-    @Given("{string} is on the login page")
-    public void is_on_the_login_page(String string) {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
-    @When("{string} enters valid credentials and logs in")
-    public void enters_valid_credentials_and_logs_in(String user) {
-        loginPage.loginWithUserType(user);
-    }
-
-
     @When("User clicks on user profile name")
     public void userClicksOnUserProfileName() {
         logoutPage.userProfile.click();

@@ -1,5 +1,5 @@
 
- @1_B30G17-180
+ @B30G17-180
 Feature: Default
 
 
