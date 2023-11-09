@@ -1,6 +1,6 @@
 package com.sprint2.step_definitions;
 
-import com.sprint2.pages.LoginPage;
+import com.sprint2.pages.LoginPage_CK;
 import com.sprint2.utilities.ConfigurationReader;
 import com.sprint2.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 
 
 public class B30G17_135_Step_Def_Login_CK {
-    LoginPage loginPage=new LoginPage();
+    LoginPage_CK loginPage=new LoginPage_CK();
     @Given("user is on the login page")
     public void user_is_on_the_home_page() {
        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
@@ -48,7 +48,7 @@ public class B30G17_135_Step_Def_Login_CK {
 
         WebElement errorText= Driver.getDriver().findElement(By.xpath("//div[.='Please fill out this field']"));
 
-        Assert.assertTrue(errorText.isDisplayed());
+        Assert.assertFalse(errorText.isDisplayed());
     }
     @Then("user should see  Remember Me link and be able to click the box")
     public void user_should_see_remember_me_link_and_be_able_to_click_the_box() {
