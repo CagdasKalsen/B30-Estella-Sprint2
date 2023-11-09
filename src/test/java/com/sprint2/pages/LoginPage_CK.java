@@ -1,19 +1,14 @@
 package com.sprint2.pages;
 
 
-import com.sprint2.utilities.BrowserUtils;
 import com.sprint2.utilities.ConfigurationReader;
 import com.sprint2.utilities.Driver;
-import com.sprint2.utilities.ExcelRead;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.swing.text.Utilities;
-
-public class LoginPage {
-    public LoginPage(){
+public class LoginPage_CK {
+    public LoginPage_CK(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

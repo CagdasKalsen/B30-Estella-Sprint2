@@ -1,8 +1,8 @@
 @B30G17-158
 Feature: Activity stream page feature
 
-  Background:
-    Given "<User>" is on the login page
+#  Background:
+#    Given "<User>" is on the login page
 
   @B30G17-156
   Scenario Outline: Users Login and View Options

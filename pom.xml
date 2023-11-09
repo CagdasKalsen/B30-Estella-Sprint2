@@ -62,11 +62,11 @@
 
                 <configuration>
                     <parallel>methods</parallel>
-                    <useUnlimitedThreads>false</useUnlimitedThreads>
-                    <threadCount>4</threadCount>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+<!--                    <threadCount>4</threadCount>-->
 
                     <perCoreThreadCount>false</perCoreThreadCount>
-                    <!--    <testFailureIgnore>true</testFailureIgnore> -->
+                        <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>

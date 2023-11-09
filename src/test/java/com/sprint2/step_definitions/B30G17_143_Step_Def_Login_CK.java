@@ -1,10 +1,9 @@
 package com.sprint2.step_definitions;
 
-import com.sprint2.pages.ActivityPage;
-import com.sprint2.pages.LoginPage;
+import com.sprint2.pages.ActivityPage_CK;
+import com.sprint2.pages.LoginPage_CK;
 import com.sprint2.utilities.ConfigurationReader;
 import com.sprint2.utilities.Driver;
-import com.sprint2.utilities.ExcelRead;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class B30G17_143_Step_Def_Login_CK {
-    LoginPage loginPage=new LoginPage();
-    ActivityPage activityPage=new ActivityPage();
+    LoginPage_CK loginPage=new LoginPage_CK();
+    ActivityPage_CK activityPage=new ActivityPage_CK();
     @Given("{string} is on the login page")
     public void is_on_the_login_page(String string) {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));

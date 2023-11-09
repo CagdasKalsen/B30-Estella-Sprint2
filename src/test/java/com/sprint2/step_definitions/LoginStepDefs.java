@@ -1,9 +1,11 @@
 package com.sprint2.step_definitions;
 
-import com.sprint2.pages.LoginPage;
+import com.sprint2.pages.LoginPage_CK;
 import com.sprint2.utilities.ConfigurationReader;
-import com.sprint2.utilities.ExcelRead;
+import com.sprint2.utilities.Driver;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.interactions.Actions;
+
 public class LoginStepDefs {
 
 
@@ -15,6 +17,8 @@ public class LoginStepDefs {
 
     @Given("the user logged in as {string}")
     public void the_user_logged_in_as(String userType) {
+
+
         //based on input enter that user information
         String username =null;
         String password =null;
@@ -30,12 +34,12 @@ public class LoginStepDefs {
             password = ConfigurationReader.getProperty("store_manager_password");
         }
         //send username and password and login
-        new LoginPage().login(username,password);
+        new LoginPage_CK().login(username,password);
     }
 
     @Given("the user logged in with username as {string} and password as {string}")
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
-        LoginPage loginPage=new LoginPage();
+        LoginPage_CK loginPage=new LoginPage_CK();
         loginPage.login(username,password);
     }
 
